@@ -18,7 +18,7 @@ Client.on("messageCreate", message => {
     const command = args.shift().toLowerCase();
 
     try {
-        const CommandFile = require(`./commands/${command}.command.js`);
+        const CommandFile = require(`./src/commands/${command}.command.js`);
         CommandFile.run(Client, message, args);
     } catch (err) {
         console.error('Erro:' + err);
